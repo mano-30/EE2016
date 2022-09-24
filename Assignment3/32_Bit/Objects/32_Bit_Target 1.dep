@@ -1,0 +1,2 @@
+Dependencies for Project '32_Bit', Target 'Target 1': (DO NOT MODIFY !)
+F (.\32_Bit.s)(0x6179315B)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 524"--list .\listings\32_bit.lst --xref -o .\objects\32_bit.o --depend .\objects\32_bit.d)

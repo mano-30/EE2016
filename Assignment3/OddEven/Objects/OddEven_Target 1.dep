@@ -1,0 +1,2 @@
+Dependencies for Project 'OddEven', Target 'Target 1': (DO NOT MODIFY !)
+F (.\OddEven.s)(0x617931BD)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 524"--list .\listings\oddeven.lst --xref -o .\objects\oddeven.o --depend .\objects\oddeven.d)

@@ -1,0 +1,70 @@
+
+
+
+ARM Macro Assembler    Page 1 OddEven.s
+
+
+    1 00000000                 TTL              OddEven.s
+    2 00000000                 AREA             Program, CODE, READONLY ;
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         Main
+    6 00000000         
+    7 00000000 E59F0008        LDR              R0,NUM1
+    8 00000004 E2001001        AND              R1,R0,#1    ;So the Result is s
+                                                            tored in R1; It is 
+                                                            1 when odd and 9 wh
+                                                            en even
+    9 00000008 E58F1004        STR              R1,Result
+   10 0000000C EF000011        SWI              &11
+   11 00000010         
+   12 00000010 00065534 
+                       NUM1    DCD              &65534
+   13 00000014                 ALIGN
+   14 00000014         Result
+   15 00000014 00000000        DCD              0
+   16 00000018                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\oddeven.d -o.\objects\oddeven.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include -IC:\Keil_v5\ARM\INC\Philips --predefine="__EVAL SETA 1" --pre
+define="__UVISION_VERSION SETA 524" --list=.\listings\oddeven.lst OddEven.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 5 in file OddEven.s
+   Uses
+      None
+Comment: Main unused
+NUM1 00000010
+
+Symbol: NUM1
+   Definitions
+      At line 12 in file OddEven.s
+   Uses
+      At line 7 in file OddEven.s
+Comment: NUM1 used once
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file OddEven.s
+   Uses
+      None
+Comment: Program unused
+Result 00000014
+
+Symbol: Result
+   Definitions
+      At line 14 in file OddEven.s
+   Uses
+      At line 9 in file OddEven.s
+Comment: Result used once
+4 symbols
+336 symbols in table

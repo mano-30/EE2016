@@ -1,0 +1,71 @@
+
+
+
+ARM Macro Assembler    Page 1 Factorial.s
+
+
+    1 00000000                 TTL              Factorial.s
+    2 00000000                 AREA             Program, CODE, READONLY ;
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         Main
+    6 00000000         
+    7 00000000 E59F0010        LDR              R0,NUM1
+    8 00000004 E2401001        SUB              R1,R0,#1
+    9 00000008         
+   10 00000008         Loop
+   11 00000008         
+   12 00000008 E0100091        MULS             R0,R1,R0
+   13 0000000C E2511001        SUBS             R1,R1,#1
+   14 00000010 1AFFFFFC        BNE              Loop
+   15 00000014         
+   16 00000014 EF000011        SWI              &11
+   17 00000018         
+   18 00000018 05 00   NUM1    DCW              &5
+   19 0000001A 00 00           ALIGN
+   20 0000001C                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\factorial.d -o.\objects\factorial.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_
+v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\INC\Philips --predefine="__EVAL SETA 1" -
+-predefine="__UVISION_VERSION SETA 524" --list=.\listings\factorial.lst Factori
+al.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Loop 00000008
+
+Symbol: Loop
+   Definitions
+      At line 10 in file Factorial.s
+   Uses
+      At line 14 in file Factorial.s
+Comment: Loop used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 5 in file Factorial.s
+   Uses
+      None
+Comment: Main unused
+NUM1 00000018
+
+Symbol: NUM1
+   Definitions
+      At line 18 in file Factorial.s
+   Uses
+      At line 7 in file Factorial.s
+Comment: NUM1 used once
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file Factorial.s
+   Uses
+      None
+Comment: Program unused
+4 symbols
+336 symbols in table
